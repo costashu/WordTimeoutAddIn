@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Timeout</title>
+
+    <link href="Content/fabric.css" rel="stylesheet" type="text/css"> <!--full version-->
+    <link href="Content/fabric.components.css" rel="stylesheet" type="text/css"> <!--full version-->
+
+    <link href="landing.page.css" rel="stylesheet" type="text/css">
+    <link href="value.placemat.css" rel="stylesheet" type="text/css">
+    <link href="progress.bar.css" rel="stylesheet" type="text/css">
+
+    <script src="Scripts/Office/1/office.debug.js" type="text/javascript"></script> <!--full version-->
+    <script src="Scripts/fabric.js" type="text/javascript"></script> <!--full version-->
+    <script src="Home.js" type="text/javascript"></script>
+</head>
+<body id="body" class="ms-landing-page ms-font-l">
+    <!-- landing page -->
+    <main id="landingMain" class="ms-landing-page__main">
+        <section class="ms-landing-page__content ms-font-m ms-fontColor-neutralPrimary">
+            <button id="btnStart" class="ms-Button ms-Button--primary" onclick="process()">
+                <span class="ms-Button-label">Start</span>
+            </button>
+        </section>
+    </main>
+
+    <!--progress page-->
+    <main id="progressMain" style="display:none" class="ms-notification-progress-determinate__main ms-bgColor-themePrimary ms-fontColor-white">
+        <img class="ms-notification-progress-determinate__logo" src="assets/logo.png">
+        <h1 class="ms-firstrun-value__title ms-font-xl ms-fontColor-white ms-fontWeight-light">Timeout</h1>
+    </main>
+    <footer id="progressFooter" style="display:none" class="ms-notification-progress-determinate__footer ms-bgColor-themePrimary ms-fontColor-white">
+        <div class="ms-progress">
+            <div id="prgText" class="ms-ProgressIndicator">
+                <div class="ms-ProgressIndicator-itemName">Processing of table</div>
+                <div class="ms-ProgressIndicator-itemProgress">
+                    <div class="ms-ProgressIndicator-progressTrack"></div>
+                    <div class="ms-ProgressIndicator-progressBar"></div>
+                </div>
+                <div class="ms-ProgressIndicator-itemDescription">Inserting of rows</div>
+            </div>
+        </div>
+    </footer>
+
+    <!--table page-->
+    <main id="tableMain" style="display:none" class="ms-landing-page__main">
+        <section class="ms-landing-page__content ms-font-m ms-fontColor-neutralPrimary">
+            <table id="tblText" class="ms-Table">
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>Number</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
